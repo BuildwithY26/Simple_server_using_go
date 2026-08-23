@@ -30,4 +30,4 @@ A backend web server and RSS feed aggregator built with Go as part of Go program
 ```
 
 ## Credits: FreeCodeCamp.org
-## Video: https://youtu.be/un6ZyFkqFKo?si=v-jzJB2WKbemXj-J
+ Video: https://youtu.be/un6ZyFkqFKo?si=v-jzJB2WKbemXj-J 
