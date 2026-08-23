@@ -31,7 +31,7 @@ A backend web server and RSS feed aggregator built with Go as part of Go program
 
 
 ```text
-Refer: `vendor` directory for modules
+Refer: "vendor" directory for modules
 ```
 ## Credits: FreeCodeCamp.org
  Video: https://youtu.be/un6ZyFkqFKo?si=v-jzJB2WKbemXj-J 
