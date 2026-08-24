@@ -68,13 +68,6 @@ type goFeed struct {
 	} `xml:"channel"`
 }
 
-type goItem struct {
-	Title       string `xml:"title"`
-	Link        string `xml:"link"`
-	Description string `xml:"description"`
-	PubDate     string `xml:"pubDate"`
-}
-
 func fetchFeed(feedURL string) (*goFeed, error) {
 	httpClient := http.Client{
 		Timeout: 10 * time.Second,
