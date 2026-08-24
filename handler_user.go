@@ -68,7 +68,7 @@ func (apiCfg *apiConfig) handlerGetUser(w http.ResponseWriter, r *http.Request, 
 }
 
 func (apiCfg *apiConfig) handlerGetPostsForUser(w http.ResponseWriter, r *http.Request, user database.User) {
-		posts, err := apiCfg.DB.GetPostsForUser(r, Context(), GetPostsForUserParams(
+		posts, err := apiCfg.DB.GetPostsForUser(r.Context(), GetPostsForUserParams(
 			user.ID,
 			10,
 		))
