@@ -35,7 +35,7 @@ Refer: "vendor" directory for modules
 ```
 ## Credits: FreeCodeCamp.org
 Free Code Camp course on go 
- Video: https://youtu.be/un6ZyFkqFKo?si=v-jzJB2WKbemXj-J 
+Video: https://youtu.be/un6ZyFkqFKo?si=v-jzJB2WKbemXj-J 
 
- ##Contributor
- @YashashMallesh  
+ #Contributor#
+  @YashashMallesh  
