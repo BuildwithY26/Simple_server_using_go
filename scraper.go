@@ -58,7 +58,7 @@ func scrapeFeed(db *database.Queries, wg *sync.WaitGroup, feed database.Feed)  {
 	log.Printf("Feed %s collected, %v posts found", feed.Name, len(goFeed.Channel.Item))
 }
 
-type RSSFeed struct {
+type goFeed struct {
 	Channel struct {
 		Title       string    `xml:"title"`
 		Link        string    `xml:"link"`
@@ -68,7 +68,7 @@ type RSSFeed struct {
 	} `xml:"channel"`
 }
 
-type RSSItem struct {
+type goItem struct {
 	Title       string `xml:"title"`
 	Link        string `xml:"link"`
 	Description string `xml:"description"`
@@ -93,7 +93,7 @@ func fetchFeed(feedURL string) (*goFeed, error) {
 	var goFeed GoFeed
 	err = xml.Unmarshal(dat, &goFeed)
 	if err != nil {
-		return nil, err
+		return GoFeed{}, err
 	}
 
 	return &goFeed, nil
