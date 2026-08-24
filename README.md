@@ -37,5 +37,7 @@ Refer: "vendor" directory for modules
 Free Code Camp course on go 
 Video: https://youtu.be/un6ZyFkqFKo?si=v-jzJB2WKbemXj-J 
 
- #Contributor#
-  @YashashMallesh  
+ ## Contributor
+  <a href="https://github.com/YashashMallesh" >
+    <img src="https://avatars.githubusercontent.com/u/191120109?v=4" />
+  </a>
