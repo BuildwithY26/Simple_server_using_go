@@ -28,19 +28,19 @@ func urlForFeed(url string)(GoFeed, error){
 	}
 	resp, err := httpClient.Get(url)
 	if err != nil {
-		return GoFeed{}, err
+		return err, GoFeed{}
 	}
 	defer resp.Body.Close()
 
 	dat, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, err
+		return err, nil
 	}
 
 	goFeed := GoFeed{}
 	err = xml.Unmarshal(dat, &goFeed)
 	if err != nil {
-		return GoFeed{}, err
+		return err, GoFeed{}
 	}
 	return goFeed, nil
 }
