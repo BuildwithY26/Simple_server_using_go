@@ -16,7 +16,7 @@ func startScraping(db *database.Queries,
 	concurrency int, timeBwRequests time.Duration) {
 		log.Printf("Scraping on %v goroutines every %s duration", concurrency, timeBwRequests)
 		ticker := time.NewTicker(timeBwRequests)
-		for ; ; <-ticker.c{
+		for ; ; <-ticker.C{
 			feeds, err := db.GetNextFeedsToFetch(
 				context.Background(),
 				int32(concurrency),
