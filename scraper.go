@@ -68,19 +68,19 @@ type goFeed struct {
 	} `xml:"channel"`
 }
 
-func fetchFeed(feedURL string) (*goFeed, error) {
+func fetchFeed(feedURL string) (*GoFeed, error) {
 	httpClient := http.Client{
 		Timeout: 10 * time.Second,
 	}
 	resp, err := httpClient.Get(feedURL)
 	if err != nil {
-		return nil, err
+		return GoFeed{}, nil
 	}
 	defer resp.Body.Close()
 
 	dat, err := io.ReadAll(resp.Body)
 	if err != nil {
-		return nil, err
+		return GoFeed{}, nil
 	}
 
 	var goFeed GoFeed
@@ -89,6 +89,6 @@ func fetchFeed(feedURL string) (*goFeed, error) {
 		return GoFeed{}, err
 	}
 
-	return &goFeed, nil
+	return &GoFeed, nil
 }
 }
