@@ -88,7 +88,7 @@ srv := &http.Server{
 }
 
 log.Printf("Server starting on port %s", port)
-err := srv.ListenAndServe()
+err = srv.ListenAndServe()
 if err != nil {
 	fmt.Printf("Failed to start server: %s\n", err)
 }
